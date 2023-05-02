@@ -1,0 +1,26 @@
+{
+  "name": "click-me",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./start.js",
+    "setup": "npm install && cpy .env.example . --rename=.env && prisma migrate reset --force",
+    "build": "tsc --outDir ./build",
+    "dev": "cross-env PORT=3333 tsx watch ./app"
+  },
+  "keywords": [],
+  "author": "Tom Shaw",
+  "license": "ISC",
+  "devDependencies": {
+    "prisma": "^4.13.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@fastify/formbody": "^7.4.0",
+    "@prisma/client": "^4.13.0",
+    "cross-env": "^7.0.3",
+    "fastify": "^4.17.0"
+  }
+}
